@@ -38,7 +38,7 @@ import org.apache.curator.utils.PathUtils;
 public class InterProcessMutex implements InterProcessLock, Revocable<InterProcessMutex>
 {
     private final LockInternals internals;
-    private final String basePath;
+    protected final String basePath;
 
     private final ConcurrentMap<Thread, LockData> threadData = Maps.newConcurrentMap();
 
